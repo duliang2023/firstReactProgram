@@ -1,17 +1,31 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDom from 'react-dom/client';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+function App() {
+  return (
+    <div>
+      <h1
+        style={{ color: 'red', fontSize: '50px', textTransform: 'uppercase' }}
+      >
+        Here we Go!
+      </h1>
+      <ShowNumber number={10} />
+    </div>
+  );
+}
+
+function ShowNumber({ number, test }) {
+  console.log(test);
+  return (
+    <h2>
+      10
+    </h2>
+  );
+}
+
+const root = ReactDom.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
